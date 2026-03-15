@@ -1,5 +1,75 @@
 <!doctype html>
 <html>
-  <head> </head>
-  <body></body>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <div id="initial-page">
+      <div>
+        <button id="stu-btn">我是學生</button>
+      </div>
+      <div>
+        <button id="teacher-btn">我是老師</button>
+      </div>
+    </div>
+
+    <div id="login-page-s">
+      <div id="id-con">
+        <input type="text" placeholder="座位編號" class="userid" id="stuseat">
+        <input type="text" placeholder="暱稱" class="userid" id="stuname">
+      </div>
+    </div>
+
+    <div id="login-page-t">
+      <div id="id-con">
+        <input type="text" placeholder="暱稱" class="userid" id="tname">
+        <input type="text" placeholder="密碼" class="userid" id="tpwd">
+      </div>
+    </div>
+
+    <div id="main-page">
+      <!-- 留言板 -->
+      <input type="radio" class="functions" id="comment">
+      <label for="comment">留言板</label>
+      <div id="comment-con">
+        <div id="showing-area"></div>
+        <input type="text" id="input-area" placeholder="輸入訊息">
+      </div>
+      
+      <!-- mcq -->
+      <input type="radio" class="functions" id="mcq"> 
+      <label for="mcq">留言板</label>
+      <div id="mcq-con">
+        <!-- for teacher -->
+        <input type="checkbox" id="makeq-btn">
+        <label for="makeq-btn">/生成問題</label>
+        <div id="make-q-t">
+          <input type="text" id="q-t" placeholder="問題">
+          <div id="ans-con-t"></div>
+
+          <button>發送問題</button>
+        </div>
+
+        <!-- question area -->
+        <div id="q-con"></div>
+      </div>
+
+      <!-- 舉手 -->
+      <input type="radio" class="functions" id="raisehand"> 
+      <label for="raisehand">舉手</label>
+      <div id="raisehand-con">
+        <input type="checkbox" id="raisehand-btn">
+        <label for="raisehand-btn">我有問題</label>
+      </div>
+
+      <!-- 匿名提問 -->
+      <input type="radio" class="functions" id="anonymous-a"> 
+      <label for="anonymous-a">舉手</label>
+      <div id="anonymous-a-con"></div>
+
+
+      <script src="script.js"></script>
+    </div>
+  </body>
 </html>
